@@ -1,0 +1,4 @@
+<view class="box">
+  <image wx:if="{{defaultShow}}" class="default" src="{{loadImg}}" mode="aspectFill" animation="{{animation}}"></image>
+  <image class="img" src="{{src}}" mode="{{mode}}" bindload="imgload"></image>
+</view>

@@ -1,0 +1,48 @@
+<view class="box">
+  <view class="box_in">
+    <view class="head" data-userid="{{info.userId}}" bindtap="toUser">
+      <view class="head_cover">
+        <Image class="head_cover_img" src="{{info.coverUrl}}"/>
+      </view>
+      <view class="head_nickName">{{info.nickName}}</view>
+      <view class="hobby" data-hobbyid="{{info.hobbyId}}" catchtap="toHobby">
+        <Image class="hobbyIcon" src="{{info.hobbyImage}}"/>
+        <view class="hobby_name fc_main">{{info.hobbyName}}</view>
+      </view>
+    </view>
+    <view class="body" data-id="{{info.id}}" bindtap="toEssay">
+      <view class="body_title">
+        <view wx:if="{{info.integral > 0}}" class="body_integral bc_gray_tint fc_gray_tint">
+          <text class="iconfont icon-yuedu fc_integral"></text>
+          {{info.integral}}
+        </view>
+        <view class="body_title_txt">{{info.title}}</view>
+      </view>
+      <view class="body_content">
+        <Image wx:if="{{info.headImage && info.headImage != ''}}" class="content_headImage" src="{{info.headImage}}"/>
+        <view class="content_txt">
+          <text>{{info.inShort}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="foot">
+      <view class="foot_item fc_gray">
+        <text class="iconfont icon-yuedu" style="font-size: 36rpx"></text>
+        <view class="foot_item_num">{{info.displayNum}}</view>
+      </view>
+      <view class="foot_item fc_gray">
+        <text class="iconfont icon-ziyuan {{info.star ? 'fc_main' : ''}}"></text>
+        <view class="foot_item_num">{{info.starNum}}</view>
+      </view>
+      <view class="foot_item fc_gray">
+        <text class="iconfont icon-shoucang {{info.collect ? 'fc_main' : ''}}"></text>
+        <view class="foot_item_num">{{info.collectNum}}</view>
+      </view>
+      <view class="foot_item fc_gray">
+        <text class="iconfont icon-pinglun"></text>
+        <view class="foot_item_num">{{info.commentNum}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:for="{{mark}}" wx:key="index" class="mark {{item.bgc}} {{item.orientation}}">{{item.title}}</view>
+</view>

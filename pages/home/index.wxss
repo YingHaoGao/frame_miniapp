@@ -1,0 +1,118 @@
+/**index.wxss**/
+.container {
+  padding: 0rpx;
+}
+.home_bg {
+  width: 100%;
+  height: 100%;
+}
+.customBar {
+  width: 100%;
+  height: 92rpx;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 100;
+  line-height: 92rpx;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-family: 'PingFangSC-Medium', 'PingFang SC';
+}
+.searchBox {
+  width: calc( 100% - 40rpx );
+  position: relative;
+  margin: auto;
+  margin-top: 40rpx;
+}
+.searchInput {
+  width: 100%;
+  border-radius: 40rpx;
+  background: rgba(0, 0, 0, .4);
+  height: 80rpx;
+  padding: 0 30rpx;
+  padding-right: 80rpx;
+  box-sizing: border-box;
+  color: #fff;
+}
+.searchInputPlaceholder {
+  color: rgba(255, 255, 255, .4);
+}
+.searchIcon {
+  padding: 20rpx;
+  padding-right: 50rpx;
+  position: absolute;
+  top: 50%;
+  right: 0rpx;
+  transform: translate(0, -50%);
+}
+.searchIcon>image {
+  width: 37rpx;
+  height: 37rpx;
+}
+.introBox {
+  position: absolute;
+  top: 164rpx;
+  left: 0rpx;
+  width: 100%;
+  text-align: center;
+}
+.logo {
+  width: 90rpx;
+  height: 85rpx;
+  margin-bottom: 20rpx;
+}
+.intro {
+  display: block;
+  width: 560rpx;
+  color: #fff;
+  margin: auto;
+  line-height: 50rpx;
+  font-size: 27rpx;
+}
+.hobbyBox {
+  position: absolute;
+  top: 630rpx;
+  bottom: 96rpx;
+  width: 100%;
+  text-align: center;
+}
+.hobbyTitle {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 0rpx;
+  transform: translate(-50%, 50%);
+}
+.hobby {
+  position: absolute;
+  padding-bottom: 10rpx;
+}
+.hobby:nth-child(1) {
+  left: 104rpx;
+  top: 170rpx;
+}
+.hobby:nth-child(2) {
+  left: 250rpx;
+  top: 70rpx;
+}
+.hobby:nth-child(3) {
+  left: 490rpx;
+  top: 145rpx;
+}
+.hobby:nth-child(4) {
+  left: 357rpx;
+  top: 288rpx;
+}
+.hobby:nth-child(5) {
+  left: 85rpx;
+  top: 368rpx;
+}
+.hobby:nth-child(6) {
+  left: 443rpx;
+  top: 495rpx;
+}
+.hobby:nth-child(7) {
+  left: 578rpx;
+  top: 310rpx;
+}

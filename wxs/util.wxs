@@ -1,0 +1,7 @@
+var numInt = function (str) {
+  return parseInt(str)
+}
+
+module.exports = {
+  numInt: numInt
+}

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "lottie-miniprogram": "^1.0.10"
+  },
+  "name": "wejuai-page-src-minapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/wejuai/wejuai-page-src-minapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/wejuai/wejuai-page-src-minapp/issues"
+  },
+  "homepage": "https://gitlab.com/wejuai/wejuai-page-src-minapp#readme",
+  "description": ""
+}

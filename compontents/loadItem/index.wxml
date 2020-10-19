@@ -1,0 +1,13 @@
+<view class="loadItem">
+  <view class="view w_80z h_40 loadFrames"></view>
+  <view class="view body">
+    <view class="view w_100z h_40 loadFrames"></view>
+    <view class="view img loadFrames"></view>
+    <view class="view w_img_r">
+      <view class="view w_100z h_40 ml_10 loadFrames"></view>
+      <view class="view w_100z h_40 ml_10 loadFrames"></view>
+      <view class="view w_100z h_40 ml_10 loadFrames"></view>
+    </view>
+  </view>
+  <view class="view w_100z h_40 loadFrames"></view>
+</view>

@@ -1,0 +1,63 @@
+<scroll-view
+  class="message"
+  scroll-y="{{true}}"
+  scroll-top="{{scroll.top}}"
+  scroll-into-view="{{scroll.intoView}}"
+  scroll-with-animation="{{scroll.withAnimation}}"
+  bindscroll="bindscroll"
+  >
+  <!-- 聊天容器 -->
+  <view class="box">
+    <!-- 聊天内容部分 -->
+    <view class="body">
+      <!-- 信息 -->
+      <view class="body_item {{item.isMe ? 'me' : 'other'}}" wx:for="{{list}}" wx:key="index">
+        <!-- 别人头像 -->
+        <view wx:if="{{!item.isMe}}" class="item_other_avater" bindtap="toUser">
+          <Image class="item_avater_img" src="{{item.avater}}"/>
+        </view>
+        <!-- 文字消息 -->
+        <view wx:if="{{item.type == 'text'}}" class="item_message">
+          <view class="item_message_text">{{item.text}}</view>
+        </view>
+        <!-- 图片消息 -->
+        <view wx:if="{{item.type == 'image'}}" class="item_message">
+          <Image class="item_message_image" data-imgidx="{{item.imageIdx}}" src="{{item.image}}" bindtap="previewImg"/>
+        </view>
+        <!-- 自己头像 -->
+        <view wx:if="{{!item.isMe}}" class="item_other_avater" bindtap="toUser">
+          <Image class="item_avater_img" src="{{item.avater}}"/>
+        </view>
+      </view>
+    </view>
+    <!-- 底部输入框组 -->
+    <view class="foot">
+      <!-- 输入框 -->
+      <view class="foot_top">
+        <text class="iconfont icon-duosefuzhu-gengduotiaojian foot_options"></text>
+        <input class="foot_input" type="text"
+          confirm-type="发送"
+          placeholder="说点什么"
+          placeholder-class="font_input_placeholder"
+          focus="{{focus}}"
+          adjust-position="{{true}}"
+          hold-keyboard="{{false}}"
+          bindinput="bindinput"
+          bindfocus="bindfocus"
+          bindblur="bindblur"
+          bindconfirm="submit"
+          ></input>
+        <view class="btn" bindtap="submit">发送</view>
+      </view>
+      <!-- 更多操作 -->
+      <view class="font_bottom">
+        <view class="bottom_item_box">
+          <view class="bottom_item" wx:for="{{optionList}}" wx:key="index" bindtap="{{item.bind}}">
+            <Image class="item_img" src="{{item.image}}" static="{{0}}"/>
+            <text class="item_title">{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,34 @@
+<scroll-view class="scrollBox"
+  scroll-y="{{true}}"
+  lower-threshold="{{'40rpx'}}"
+  scroll-top="{{scrollTop}}"
+  scroll-with-animation="{{scrollWithAnimation}}"
+  enable-back-to-top="{{true}}"
+  refresher-enabled="{{true}}"
+  refresher-triggered="{{triggered}}"
+  refresher-threshold="{{10}}"
+  refresher-default-style="{{'#1B9AFFFF'}}"
+  refresher-background="{{'white'}}"
+  show-scrollbar="{{false}}"
+  enhanced="{{true}}"
+  fast-deceleration="{{true}}"
+  bindscrolltolower="scrolltolower"
+  bindrefresherrefresh="refresherrefresh"
+  style="height: calc( 100vh - 42px ); position: relative;">
+  <!-- 列表 -->
+  <slot></slot>
+  <!-- 加载占位 -->
+  <LoadItem wx:if="{{firstLoad}}"/>
+  <LoadItem wx:if="{{firstLoad}}"/>
+  <LoadItem wx:if="{{firstLoad}}"/>
+  <LoadItem wx:if="{{firstLoad}}"/>
+  <!-- 暂无数据 -->
+  <view class="dataToast fc_gray notData" wx:if="{{notData}}">
+    <text class="iconfont icon-zanwu"></text>
+    <view>暂无数据</view>
+  </view>
+  <!-- 暂无更多 -->
+  <view class="dataToast fc_gray_tint" wx:if="{{notMore}}">暂无更多</view>
+  <!-- 加载更多 -->
+  <view class="dataToast fc_gray_tint" wx:if="{{loadMore}}">加载更多</view>
+</scroll-view>

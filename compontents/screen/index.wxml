@@ -1,0 +1,12 @@
+<view class="screen">
+  <view class="search">
+    <text class="iconfont icon-soushuo searchIcon fc_gray" bindtap="searchClick"></text>
+    <input class="searchInput" placeholder="{{placeholder}}" bindinput="searchInput" bindconfirm="searchClick"></input>
+  </view>
+  <picker wx:if="{{isTime}}" mode="date" bindchange="changeTime" value="{{time}}">
+    <view class="picker bg_gray_tint fc_gray">{{time}}<text class="iconfont icon-shangxia sortIcon"></text></view>
+  </picker>
+  <picker wx:if="{{isSort}}" bindchange="changeSort" range="{{sortList}}" range-key="title">
+    <view class="picker bg_gray_tint fc_gray">{{sort.title}}<text class="iconfont icon-shangxia sortIcon"></text></view>
+  </picker>
+</view>

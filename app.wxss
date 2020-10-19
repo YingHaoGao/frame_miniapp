@@ -1,0 +1,183 @@
+/**iconfont**/
+@import '/lib/style/iconfont.wxss';
+
+/**app.wxss**/
+page {
+  padding: 0rpx;
+  margin: 0rpx;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+}
+.ab-full {
+  position: absolute;
+  top: 0; right: 0;
+  /* bottom: 0; */
+  left: 0;
+  z-index: 10;
+}
+.iphone-pd {
+  padding-bottom: 60rpx;
+}
+
+/* 主色 */
+.bg_main {
+  background: #1B9AFFFF !important;
+}
+.fc_main {
+  color: #1B9AFFFF !important;
+}
+.bc_main {
+  border-color: #1B9AFFFF !important;
+}
+.bbc_main {
+  border-bottom-color: #1B9AFFFF !important;
+}
+
+/* 背景色 */
+.bgc_page {
+  background: #F5F5F5FF !important;
+}
+
+/* 深灰 */
+.fc_gray {
+  color: #626262FF !important;
+}
+.bg_gray {
+  background: #626262FF !important;
+}
+.bc_gray {
+  border-color: #626262FF !important;
+}
+.bbc_gray {
+  border-bottom-color: #626262FF !important;
+}
+/* 浅灰 */
+.fc_gray_tint {
+  color: #F2F2F2FF !important;
+}
+.bg_gray_tint {
+  background: #F2F2F2FF !important;
+}
+.bc_gray_tint {
+  border-color: #F2F2F2FF !important;
+}
+.bbc_gray_tint {
+  border-bottom-color: #F2F2F2FF !important;
+}
+
+/* 白色 */
+.fc_white {
+  color: #fff;
+}
+
+/* 积分黄 */
+.fc_integral {
+  color: rgb(255, 209, 26) !important;
+}
+.gb_integral {
+  background: rgb(255, 209, 26) !important;
+}
+
+/* 动画 */
+/* 上下浮动 */
+.an_upDown {
+  animation: upDown 1s infinite ease-in-out alternate;
+}
+@keyframes upDown
+{
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 30rpx);
+  }
+}
+
+/* 扩散 */
+.an_diffuse {
+  position: relative;
+}
+.an_diffuse::after, .an_diffuse::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate( -50%, -50% );
+  border-radius: 50%;
+  box-shadow: 0rpx 0rpx 40rpx 10rpx rgb(26, 152, 255), 0rpx 0rpx 20rpx 10rpx rgba(26, 152, 255, .8) inset;
+  opacity: 0.1;
+}
+.an_diffuse::after {
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin:0 0;
+  -o-transform-origin:0 0;
+  transform-origin:0 0;
+  animation: diffuse 3s infinite ease-out;
+}
+.an_diffuse::before {
+  animation: diffuse 3s infinite ease-in-out;
+  animation-delay: 1.5s;
+}
+@keyframes diffuse
+{
+  0% {
+    width: 50%;
+    height: 50%;
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.99999;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+/* 转圈 */
+.an_circle {
+  animation: circle 2.5s infinite ease;
+}
+@keyframes circle
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circle_reverse
+{
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 字体闪烁 */
+.an_fontFlicker {
+  opacity: 0.1;
+  animation: an_fontFlicker 1s infinite ease-in-out alternate;
+}
+@keyframes an_fontFlicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0.999999;
+  }
+}

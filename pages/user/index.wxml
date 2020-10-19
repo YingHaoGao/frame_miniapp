@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<wxs src="../../wxs/util.wxs" module="util" />
+<view class="container">
+  <!-- 背景 -->
+  <view class="cover">
+    <Image class="cover_img" src="{{userInfo.cover}}" mode="aspectFill"></Image>
+  </view>
+  <!-- 简介 -->
+  <view class="intro">
+    <view class="intro_left">
+      <view class="intro_avater">
+        <Image class="intro_avater_img" src="{{userInfo.headImage}}"></Image>
+      </view>
+      <view class="intro_name">{{userInfo.nickName}}</view>
+      <view class="intro_abstract" bindtap="openInShort">{{userInfo.inShort}}</view>
+    </view>
+    <view class="intro_right">
+      <view class="intro_setdata" bindtap="toChangeInfo">编辑个人资料</view>
+      <view>
+        <star value="{{util.numInt(userInfo.sellerScore)}}" onlyRead="{{true}}" width="{{30}}"/>
+      </view>
+    </view>
+    <!-- 数量 -->
+    <view class="intro_data">
+      <view class="intro_data_item" bindtap="openHobbyes">
+        <view class="intro_data_item_num">{{detailedInfo.attentionNum}}</view>
+        <view class="intro_data_item_title">爱好</view>
+      </view>
+      <view class="intro_data_item" bindtap="toAttention">
+        <view class="intro_data_item_num">{{detailedInfo.attentionNum}}</view>
+        <view class="intro_data_item_title">关注</view>
+      </view>
+      <view class="intro_data_item" bindtap="toFollow">
+        <view class="intro_data_item_num">{{detailedInfo.followNum}}</view>
+        <view class="intro_data_item_title">粉丝</view>
+      </view>
+      <view class="intro_data_item" bindtap="toIntegral">
+        <view class="intro_data_item_num">{{detailedInfo.integral}}</view>
+        <view class="intro_data_item_title">积分</view>
+      </view>
+    </view>
+  </view>
+  <!-- 作品 & 操作 -->
+  <view class="works">
+    <view class="works_item" bindtap="toCollect">
+      <image class="works_item_icon" src="../../icon/user/collect.png"></image>
+      <text class="works_item_title">我的收藏</text>
+      <text class="works_item_label fc_gray bg_gray_tint">{{detailedInfo.collectNum}}</text>
+      <image class="works_item_right" src="../../icon/user/right.png"></image>
+    </view>
+    <view class="works_item" bindtap="toArticle">
+      <image class="works_item_icon" src="../../icon/user/article.png"></image>
+      <text class="works_item_title">我的文章</text>
+      <text class="works_item_label fc_gray bg_gray_tint">{{detailedInfo.articleNum}}</text>
+      <image class="works_item_right" src="../../icon/user/right.png"></image>
+    </view>
+    <view class="works_item" bindtap="toReward">
+      <image class="works_item_icon" src="../../icon/user/reward.png"></image>
+      <text class="works_item_title">我的悬赏</text>
+      <text class="works_item_label fc_gray bg_gray_tint">{{detailedInfo.rewardNum}}</text>
+      <image class="works_item_right" src="../../icon/user/right.png"></image>
+    </view>
+    <view class="works_item" bindtap="toDraft">
+      <image class="works_item_icon" src="../../icon/user/draft.png"></image>
+      <text class="works_item_title">我的草稿</text>
+      <text class="works_item_label fc_gray bg_gray_tint">{{detailedInfo.draftNum}}</text>
+      <image class="works_item_right" src="../../icon/user/right.png"></image>
+    </view>
+    <view class="works_item" bindtap="toSet">
+      <image class="works_item_icon" src="../../icon/user/set.png"></image>
+      <text class="works_item_title">设置</text>
+      <image class="works_item_right" src="../../icon/user/right.png"></image>
+    </view>
+  </view>
+</view>

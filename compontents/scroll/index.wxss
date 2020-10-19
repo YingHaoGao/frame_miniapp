@@ -1,0 +1,15 @@
+.dataToast {
+  font-size: 20rpx;
+  text-align: center;
+  padding: 10rpx 0rpx;
+}
+.notData {
+  font-size: 30rpx;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dataToast .iconfont {
+  font-size: 200rpx;
+}

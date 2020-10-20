@@ -1,7 +1,6 @@
 import Api from './utils/api.js';
 import config from "./utils/config.js";
 import util from "./utils/util.js";
-import lottie from 'lottie-miniprogram';
 
 let userInfo = wx.getStorageSync('userInfo');
 
@@ -78,8 +77,7 @@ App({
     // 工具
     API: Api.httpUrl,
     CONFIG: config,
-    UTIL: util,
-    LOTTIE: lottie
+    UTIL: util
   },
   REQUEST: (url, method, data, wType, params) => {
     let that = getApp();

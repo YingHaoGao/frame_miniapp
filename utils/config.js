@@ -1,7 +1,6 @@
 const CONFIG = {
   url: {
-    'accounts': 'https://accounts.wejuai.com',
-    'app': 'https://app.wejuai.com'
+    'accounts': ''
   }
 };
 // 是否开启订阅服务

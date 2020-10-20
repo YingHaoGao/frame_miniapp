@@ -2,7 +2,7 @@
   "dependencies": {
     "lottie-miniprogram": "^1.0.10"
   },
-  "name": "wejuai-page-src-minapp",
+  "name": "frame-minapp",
   "version": "1.0.0",
   "main": "app.js",
   "devDependencies": {},
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/wejuai/wejuai-page-src-minapp.git"
+    "url": "git+https://github.com/YingHaoGao/frame_miniapp.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/wejuai/wejuai-page-src-minapp/issues"
+    "url": "https://github.com/YingHaoGao/frame_miniapp.git/issues"
   },
-  "homepage": "https://gitlab.com/wejuai/wejuai-page-src-minapp#readme",
+  "homepage": "https://github.com/YingHaoGao/frame_miniapp.git#readme",
   "description": ""
 }

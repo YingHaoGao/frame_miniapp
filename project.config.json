@@ -28,7 +28,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.13.1",
 	"appid": "wx858da3eb9bdb7388",
-	"projectname": "wejuai-minapp",
+	"projectname": "frame-minapp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
